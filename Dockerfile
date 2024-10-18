@@ -1,5 +1,6 @@
 FROM node:latest
-WORKDIR /apps
-ADD . .
+WORKDIR /usr/src/app
+COPY package*.json ./
+COPY . .
 RUN npm install
 CMD ["node","app.js"]
